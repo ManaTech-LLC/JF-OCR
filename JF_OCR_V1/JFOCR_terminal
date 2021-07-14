@@ -1,0 +1,7 @@
+python save_bbox_CRAFT.py --trained_model=models/craft_jf_trained.pth --test_folder=test_one_image/ --save_csv_loc=csv/bbox_craft.csv --mag_ratio=2
+
+python crop_text_bbox.py --save_csv_loc=csv/bbox_craft.csv --test_folder=test_one_image/ --crop_dir=CropWords/
+
+python3 text_recognition.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --image_folder CropWords/ --saved_model weights/TPS-ResNet-BiLSTM-Attn.pth --save_csv_loc csv/bbox_craft.csv 
+
+
