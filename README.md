@@ -27,6 +27,7 @@ Those bounding boxes found in the CRAFT algorithm are then fed into our text rec
 git clone https://github.com/ManaTech-LLC/JF-OCR.git
 ```
 * All code is in JF_OCR_V1
+* Set up a virtual environment (I use Andaconda)
 * Install packages through the requirements.txt
 ```
 pip install -r requirments.txt
@@ -50,7 +51,7 @@ check ```save_bbox_CRAFT.py``` for other arguments for CRAFT detection.
 python crop_text_bbox.py --save_csv_loc=csv/bbox_craft.csv --test_folder=test_one_image/ --crop_dir=cropped_words/
 ```
 
-* Last, do the text recognition using CRNN
+* Last, do the text recognition using CRNN.
 ```
 python3 text_recognition.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --image_folder cropped_words/             --saved_model weights/TPS-ResNet-BiLSTM-Attn.pth --save_csv_loc csv/bbox_craft.csv 
 ```
