@@ -24,8 +24,9 @@ Those bounding boxes found in the CRAFT algorithm are then fed into our text rec
 
 * Download the GitHub Repo
 ```
-git clone https://github.com/ManaTech-LLC/JF-OCR
+git clone https://github.com/ManaTech-LLC/JF-OCR.git
 ```
+* All code is in JF_OCR_V1
 * Install packages through the requirements.txt
 ```
 pip install -r requirments.txt
